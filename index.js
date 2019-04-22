@@ -2,11 +2,7 @@ const vr = require("validator")
 const sentenceCase = require("sentence-case")
 const ApiError = require("./ApiError")
 
-class validate {
-  static instanceOf(nameValue, label) {
-    return new validate(nameValue, label)
-  }
-
+class ValidateThese {
   constructor(nameValue, label = null) {
     this.name = Object.keys(nameValue)[0]
     this.value = Object.values(nameValue)[0]
@@ -115,6 +111,8 @@ class validate {
     return this
   }
 }
+
+const validate = (nameValue, label) => new ValidateThese(nameValue, label)
 
 exports.default = validate
 module.exports = exports.default
