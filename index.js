@@ -117,4 +117,6 @@ class validate {
   }
 }
 
-module.exports = validate
+exports.default = validate;
+module.exports = exports.default;
+module.exports.default = exports.default;

@@ -2,7 +2,7 @@
   "name": "validate-these",
   "version": "0.1.0",
   "description": "Easy consistent validation for front-end or back-end.",
-  "main": "validate-these.js",
+  "main": "index.js",
   "scripts": {
     "test": "test"
   },
