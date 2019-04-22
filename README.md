@@ -48,3 +48,10 @@ validate({ lastName }).min(2).max(32)
 | `phone(allowBlank)` | Invalid if not a phone number                              |
 | `numericString()`   | Invalid if not a string of integers                        |
 | `boolean()`         | Invalid if not `true` or `false`                           |
+| `strongPassword()`  | Invalid if password is weak                                |
+
+## Thank you to these dependencies
+
+- [owasp-password-strength-test](https://www.npmjs.com/package/owasp-password-strength-test)
+- [sentence-case](https://www.npmjs.com/package/sentence-case)
+- [validator](https://www.npmjs.com/package/validator)
