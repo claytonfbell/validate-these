@@ -1,6 +1,6 @@
 # validate-these
 
-[![Build Status](https://travis-ci.org/claytonfbell/validate-these.svg?branch=master)](https://travis-ci.org/claytonfbell/validate-these)
+[![npm version](https://badge.fury.io/js/validate-these.svg)](https://badge.fury.io/js/validate-these) [![Build Status](https://travis-ci.org/claytonfbell/validate-these.svg?branch=master)](https://travis-ci.org/claytonfbell/validate-these)
 
 Validate user input on your backend or frontend without having to compose tedious error messages.
 
