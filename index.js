@@ -14,7 +14,7 @@ class ValidateThese {
   }
 
   notNull() {
-    if (this.value === null) {
+    if (typeof this.value === "undefined" || this.value === null) {
       this.fail(`Value for **${this.label}** is missing.`)
     }
     return this
