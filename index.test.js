@@ -99,3 +99,13 @@ test("valid greaterThan", () => {
   const name = 3
   expect(validate({ name }).greaterThan(2))
 })
+
+test("invalid strongPassword", () => {
+  const password = "weak-password"
+  expect(() => validate({ password }).strongPassword()).toThrow()
+})
+
+test("valid strongPassword", () => {
+  const password = "strOngPa55w0rd!"
+  expect(validate({ password }).strongPassword())
+})

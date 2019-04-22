@@ -1,6 +1,14 @@
 const vr = require("validator")
 const sentenceCase = require("sentence-case")
 const ApiError = require("./ApiError")
+const owasp = require("owasp-password-strength-test")
+owasp.config({
+  allowPassphrases: true,
+  maxLength: 128,
+  minLength: 10,
+  minPhraseLength: 20,
+  minOptionalTestsToPass: 4,
+})
 
 class ValidateThese {
   constructor(nameValue, label = null) {
@@ -109,6 +117,13 @@ class ValidateThese {
       this.fail(`Value for **${this.label}** does not look valid.`)
     }
     return this
+  }
+
+  strongPassword() {
+    const result = owasp.test(this.value)
+    if (result.errors.length > 0) {
+      this.fail(result.errors.join("\n"))
+    }
   }
 }
 
