@@ -1,6 +1,6 @@
 {
   "name": "validate-these",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Easy consistent validation for front-end or back-end.",
   "main": "index.js",
   "scripts": {
