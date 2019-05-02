@@ -35,20 +35,21 @@ validate({ lastName }).min(2).max(32)
 
 ```
 
-| function            | description                                                |
-| ------------------- | ---------------------------------------------------------- |
-| `notNull()`         | Invalid if value is `null` or `undefined`                  |
-| `notEmpty()`        | Invalid if it is not a string with lengh greater than zero |
-| `min(x)`            | Invalid if string length is less than `x`                  |
-| `max(x)`            | Invalid if string length is greater than `x`               |
-| `greaterThanZero()` | Alias to `greaterThan(0)`                                  |
-| `greaterThan(x)`    | Invalid if not greater than `x`                            |
-| `email()`           | Invalid if not email address                               |
-| `match(regex)`      | Invalid if does not pass your custom regular expression    |
-| `phone(allowBlank)` | Invalid if not a phone number                              |
-| `numericString()`   | Invalid if not a string of integers                        |
-| `boolean()`         | Invalid if not `true` or `false`                           |
-| `strongPassword()`  | Invalid if password is weak                                |
+| function             | description                                                |
+| -------------------- | ---------------------------------------------------------- |
+| `notNull()`          | Invalid if value is `null` or `undefined`                  |
+| `notEmpty()`         | Invalid if it is not a string with lengh greater than zero |
+| `min(x)`             | Invalid if string length is less than `x`                  |
+| `max(x)`             | Invalid if string length is greater than `x`               |
+| `greaterThanZero()`  | Alias to `greaterThan(0)`                                  |
+| `greaterThan(x)`     | Invalid if not greater than `x`                            |
+| `email()`            | Invalid if not email address                               |
+| `match(regex)`       | Invalid if does not pass your custom regular expression    |
+| `phone(allowBlank)`  | Invalid if not a phone number                              |
+| `numericString()`    | Invalid if not a string of integers                        |
+| `boolean()`          | Invalid if not `true` or `false`                           |
+| `strongPassword()`   | Invalid if password is weak                                |
+| `oneOf(valuesArray)` | Invalid if it does not match one of the array values       |
 
 ## Thank you to these dependencies
 
