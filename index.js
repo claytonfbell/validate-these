@@ -125,6 +125,12 @@ class ValidateThese {
       this.fail(result.errors.join("\n"))
     }
   }
+
+  oneOf(values = []) {
+    if (values.indexOf(this.value) === -1) {
+      this.fail(`Value for **${this.label}** is not one of the valid options.`)
+    }
+  }
 }
 
 const validate = (nameValue, label) => new ValidateThese(nameValue, label)

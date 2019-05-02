@@ -109,3 +109,13 @@ test("valid strongPassword", () => {
   const password = "strOngPa55w0rd!"
   expect(validate({ password }).strongPassword())
 })
+
+test("invalid oneOf", () => {
+  const type = "bad"
+  expect(() => validate({ type }).oneOf(["good", "great"])).toThrow()
+})
+
+test("valid oneOf", () => {
+  const type = "good"
+  expect(validate({ type }).oneOf(["good", "great"]))
+})
