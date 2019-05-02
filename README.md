@@ -43,6 +43,7 @@ validate({ lastName }).min(2).max(32)
 | `max(x)`             | Invalid if string length is greater than `x`               |
 | `greaterThanZero()`  | Alias to `greaterThan(0)`                                  |
 | `greaterThan(x)`     | Invalid if not greater than `x`                            |
+| `lessThan(x)`        | Invalid if not less than `x`                               |
 | `email()`            | Invalid if not email address                               |
 | `match(regex)`       | Invalid if does not pass your custom regular expression    |
 | `phone(allowBlank)`  | Invalid if not a phone number                              |

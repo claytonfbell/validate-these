@@ -91,13 +91,23 @@ test("valid match", () => {
 })
 
 test("invalid greaterThan", () => {
-  const name = 2
-  expect(() => validate({ name }).greaterThan(2)).toThrow()
+  const number = 2
+  expect(() => validate({ number }).greaterThan(2)).toThrow()
 })
 
 test("valid greaterThan", () => {
-  const name = 3
-  expect(validate({ name }).greaterThan(2))
+  const number = 3
+  expect(validate({ number }).greaterThan(2))
+})
+
+test("invalid lessThan", () => {
+  const number = 2
+  expect(() => validate({ number }).lessThan(2)).toThrow()
+})
+
+test("valid lessThan", () => {
+  const number = 1
+  expect(validate({ number }).lessThan(2))
 })
 
 test("invalid strongPassword", () => {

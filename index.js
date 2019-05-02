@@ -77,6 +77,16 @@ class ValidateThese {
     return this
   }
 
+  lessThan(x) {
+    this.notNull()
+    if (typeof this.value === "number") {
+      if (this.value >= x) {
+        this.fail(`Value for **${this.label}** must be less than **${x}**.`)
+      }
+    }
+    return this
+  }
+
   email() {
     this.notNull().min(5)
 
