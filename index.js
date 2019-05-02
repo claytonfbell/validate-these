@@ -130,16 +130,30 @@ class ValidateThese {
   }
 
   strongPassword() {
+    this.notNull().notEmpty()
     const result = owasp.test(this.value)
     if (result.errors.length > 0) {
       this.fail(result.errors.join("\n"))
     }
+    return this
   }
 
   oneOf(values = []) {
-    if (values.indexOf(this.value) === -1) {
-      this.fail(`Value for **${this.label}** is not one of the valid options.`)
+    this.notNull()
+    if (Array.isArray(this.value)) {
+      for (let i = 0; i < this.value.length; i++) {
+        if (values.indexOf(this.value[i]) === -1) {
+          this.fail(`Values for **${this.label}** are not all valid options.`)
+        }
+      }
+    } else {
+      if (values.indexOf(this.value) === -1) {
+        this.fail(
+          `Value for **${this.label}** is not one of the valid options.`
+        )
+      }
     }
+    return this
   }
 }
 

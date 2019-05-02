@@ -129,3 +129,13 @@ test("valid oneOf", () => {
   const type = "good"
   expect(validate({ type }).oneOf(["good", "great"]))
 })
+
+test("invalid oneOf with multiple values", () => {
+  const types = ["bad", "good"]
+  expect(() => validate({ types }).oneOf(["good", "great"])).toThrow()
+})
+
+test("valid oneOf with multiple values", () => {
+  const types = ["great", "good"]
+  expect(validate({ types }).oneOf(["good", "great"]))
+})
